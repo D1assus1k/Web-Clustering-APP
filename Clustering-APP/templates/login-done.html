@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    div {
+        height: 300px;
+    }
+    h1 {
+        color: #FBA0E3;
+        font-size: 70px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    body {
+        background-color: #80DAEB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    ul {
+        list-style: square;
+    }
+     .botton_to {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FBA0E3;
+        border: 0px;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        margin: 5px;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+     }
+     .botton_to:hover {
+        background-color: hotpink;
+     }
+
+</style>
+<body>
+    <h1>
+        Вы вошли!
+    </h1>
+     <button class="botton_to"
+        onclick="window.location.href = 'main.html';">
+        На главную
+    </button>
+
+    <button class="botton_to"
+        onclick="window.location.href = 'files';">
+        Перейти к кластеризации
+    </button>
+</body>
+</html>

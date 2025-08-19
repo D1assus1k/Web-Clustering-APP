@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<style>
+        body {
+            background-color: #80DAEB;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding-top: 50px;
+        }
+        h2 {
+            color: #FBA0E3;
+            font-size: 70px;
+            font-family: "Comic Sans MS";
+            margin-bottom: 20px;
+            text-align: center; /* Центрирование заголовка */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .file_main, .file_liba, .file-wrapper::before {
+            background-color: #FBA0E3;
+            border: 0;
+            color: black;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: "Comic Sans MS";
+            font-size: 15px;
+            border-radius: 5em;
+            transition: 0.5s;
+            margin: 5px; /* Увеличил margin для лучшего разделения кнопок */
+            width: 200px; /* Фиксированная ширина для единообразия */
+            text-align: center;
+        }
+        .file_main:hover {
+            background-color: hotpink;
+        }
+        .file_liba:hover {
+            background-color: hotpink;
+        }
+        .file_space:hover {
+            background-color: hotpink;
+        }
+        input[type="file"] {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        .file-wrapper {
+            position: relative;
+            width: 30%;
+            margin: 10px 0;
+        }
+        .file_space {
+            font-family: "Comic Sans MS";
+            font-size: 15px;
+            background-color: #FBA0E3;
+            border: 0;
+            color: black;
+            padding: 5px 7px;
+            border-radius: 5em;
+            margin: 5px;
+            width: 30%;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .file-wrapper::before {
+            content: 'Выберите файл';
+        }
+        .form-example {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            width: 80%;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 17px;
+            color: black;
+            border-radius: 5em;
+            text-align: left;
+
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5em;
+            width: 100%;
+            margin-top: 5px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 0px;
+
+        }
+</style>
+<body>
+    <div>
+        <h2>Загрузите файл</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label class="file-wrapper">
+                <input class="file-botton" type="file" name="file"/>
+            </label>
+
+            <div class="form-example">
+                <label for="X">Введите параметр X:</label>
+                <input type="text" name="X" id="X" required />
+            </div>
+
+            <div class="form-example">
+                <label for="Y">Введите параметр Y:</label>
+                <input type="text" name="Y" id="Y" required />
+            </div>
+
+            <input class="file_space" type="submit" value="Подтвердить"/>
+        </form>
+
+
+        <div class="button-container">
+        <button class="file_liba" onclick="window.location.href = 'libary';">
+                Библиотека
+            </button>
+            <button class="file_main"
+                onclick="window.location.href = 'main.html';">
+                На главную
+            </button>
+        </div>
+    </div>
+</body>
+</html>

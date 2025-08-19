@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    div {
+        height: 300px;
+    }
+    h1 {
+        color: #FBA0E3;
+        font-size: 50px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    li {
+        color: hotpink;
+        font-size: 30px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    h3 {
+        color: hotpink;
+        font-size: 30px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    body {
+        background-color: #80DAEB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    ul {
+    list-style: square;
+    }
+    .botton_log_in {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #FBA0E3;
+            border: 0px;
+            color: black;
+            padding: 8px 10px;
+            cursor: pointer;
+            margin: 2px;
+            font-family:"Comic sans ms";
+            border-radius: 5em;
+        }
+    .botton_log_in:hover {
+            background-color: hotpink;
+        }
+     .botton_to {
+            background-color: #FBA0E3;
+            border: 0px ;
+            color: black;
+            padding: 5px 10px;
+            cursor: pointer;
+            position: relative;
+            top: 190px;
+            font-family:"Comic sans ms";
+            border-radius: 5em;
+            transition: 0.5s;
+            margin: 2px;
+            position: relative;
+            top: 10px;
+        }
+   .botton_to:hover {
+    background-color: hotpink;
+        }
+
+</style>
+<body>
+<h1>
+    Упс,кажется вы неправильно указали логин или пароль(
+</h1>
+<ul type="disc">
+    <li>Логин: {{login}}</li>
+</ul>
+
+<button class="botton_log_in"
+        onclick="window.location.href = 'login';">
+    Войти в аккаунт
+</button>
+
+<button class="botton_to"
+        onclick="window.location.href = 'main.html';">
+    На главную
+</button>
+</body>

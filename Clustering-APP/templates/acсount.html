@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width1, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Аккаунт</title>
+</head>
+<style>
+    h1 {
+        color: #FBA0E3;
+        font-size: 70px;
+        font-family:"Comic sans ms";
+        position: relative;
+        left: 20px;
+    }
+    body {
+        background-color: #80DAEB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .botton_log_in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FBA0E3;
+        border: 0px;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        margin: 5px;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+    }
+    .botton_log_in:hover {
+        background-color: hotpink;
+    }
+    .botton_reg {
+        background-color: #FBA0E3;
+        border: 0px;
+        margin: 5px;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+    }
+    .botton_reg:hover {
+        background-color: hotpink;
+    }
+    .botton_main_on_user{
+        margin: 5px;
+        background-color: #FBA0E3;
+        border: 0px;
+        border-color: black;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+    }
+    .botton_main_on_user:hover {
+            background-color: hotpink;
+    }
+</style>
+<body>
+    <h1>
+        Аккаунт
+    </h1>
+    <form method="post">
+    </form>
+    <button class="botton_log_in"
+        onclick="window.location.href = 'login';">
+        Войти в аккаунт
+    </button>
+    <button class="botton_reg"
+        onclick="window.location.href = 'register';">
+        Регистрация аккаунта
+    </button>
+    <button class="botton_main_on_user"
+        onclick="window.location.href = 'main';">
+        Вернутся на главную
+    </button>
+</body>
+</html>

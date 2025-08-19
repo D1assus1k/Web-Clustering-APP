@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кластер</title>
+    <style>
+         .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #80DAEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #FBA0E3;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        body {
+            background-color: #80DAEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            color: #FBA0E3;
+            font-size: 70px;
+            font-family:"Comic sans ms";
+            position: relative;
+            left: 20px;
+            text-stroke: 2px red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .botton_save {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #FBA0E3;
+            border: 0px;
+            color: black;
+            padding: 8px 10px;
+            cursor: pointer;
+            margin: 5px;
+            font-family:"Comic sans ms";
+            font-size: 15px;
+            border-radius: 5em;
+            transition: 0.5s;
+
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .botton_save:hover {
+            background-color: hotpink;
+        }
+        li {
+            color: #FBA0E3; /* Цвет по умолчанию для всего текста в li */
+            font-size: 25px;
+            font-family:"Comic sans ms";
+            position: relative;
+            left: 20px;
+            text-stroke: 2px red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hotpink-text {
+            color: hotpink; /* Задаем цвет hotpink для этого класса */
+        }
+        ul {
+            list-style: square;
+        }
+    </style>
+</head>
+<body>
+   <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <h1>
+        Ваши данные кластеризованны!
+    </h1>
+    <div class="button-container">
+        <form method="post" action="/save">
+            <button class="botton_save">
+                Сохранить
+            </button>
+        </form>
+    </div>
+    <iframe src="http://127.0.0.1:8000/dash/" width="1600" height="1100"></iframe>
+    <script>
+
+        window.addEventListener('load', function() {
+            document.querySelector('.loader-wrapper').style.display = 'none';
+        })
+    </script>
+    <ul type="disc">
+        <li><span class="hotpink-text">Всего кластеров:</span> {{number}}</li>
+        <li><span class="hotpink-text">Коэффицент силуэта:</span> {{silhouette}}</li>
+        <li><span class="hotpink-text">Самый большой кластер:</span> {{cluster_name}} c {{size}} точек</li>
+    </ul>
+</body>
+</html>

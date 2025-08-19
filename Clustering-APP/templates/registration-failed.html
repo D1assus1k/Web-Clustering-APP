@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация отклонена</title>
+</head>
+<style>
+    h1 {
+        color: #FBA0E3;
+        font-size: 70px;
+        font-family:"Comic sans ms";
+        position: relative;
+        left: 20px;
+    }
+    li {
+        color: hotpink;
+        font-size: 30px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    h3 {
+        color: hotpink;
+        font-size: 30px;
+        font-family:"Comic sans ms";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    body {
+        background-color: #80DAEB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    ul {
+        list-style: square;
+    }
+    .botton_to {
+        margin: 5px;
+        background-color: #FBA0E3;
+        border: 0px;
+        border-color: black;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+    }
+    .botton_to:hover {
+        background-color: hotpink;
+    }
+</style>
+<body>
+    <h1>
+        Упс, ваш логин или почта заняты(
+    </h1>
+    <ul type="disc">
+    <li>Логин: {{login}}</li>
+    </ul>
+    <button class="botton_to"
+        onclick="window.location.href = 'register';">
+        Назад
+    </button>
+     <button class="botton_to"
+        onclick="window.location.href = 'main.html';">
+        На главную
+    </button>
+</body>
+</html>

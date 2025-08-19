@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+</head>
+<style>
+    h1 {
+        color: #FBA0E3;
+        font-size: 70px;
+        font-family:"Comic sans ms";
+    }
+    body {
+        background-color: #80DAEB;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        padding-top: 50px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botton_to {
+        margin: 5px;
+        background-color: #FBA0E3;
+        border: 0px;
+        border-color: black;
+        color: black;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family:"Comic sans ms";
+        font-size: 15px;
+        border-radius: 5em;
+        transition: 0.5s;
+    }
+    .botton_to:hover {
+        background-color: hotpink;
+    }
+    .form-example{
+        display: flex;
+        margin: 10px 0;
+        background-clip: padding-box;
+        width: 100%;
+        height: calc(2.25rem + 20px);
+        padding: 0.375rem 0.75rem;
+        font-family:"Comic sans ms";
+        font-size: 17px;
+        font-weight: 80;
+        line-height: 1.5;
+        color: black;
+        border-radius: 5em;
+        display: block;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+   }
+   input[type="text"], input[type="password"], input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5em;
+        width: 100%;
+        margin-top: 5px;
+   }
+   .file_space {
+        font-family: "Comic Sans MS";
+        font-size: 15px;
+        background-color: #FBA0E3;
+        border: 0;
+        color: black;
+        padding: 5px 7px;
+        border-radius: 5em;
+        margin: 5px;
+        width: 60%;
+        text-align: center;
+        transition: 0.5s;
+   }
+   .file_space:hover {
+        background-color: hotpink;
+   }
+</style>
+<body>
+    <h1> Регистрация</h1>
+    <form method="post" action="/reg">
+        <div class="form-example">
+            <label for="login">Enter your login: </label>
+            <input type="text" name="login" id="login" required />
+        </div>
+        <div class="form-example">
+            <label for=password>Enter your password: </label>
+            <input type ="password" name="password" id="password" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type ="email" name="email" id="email" required />
+        </div>
+        <input class="file_space" type="submit" value="Подтвердить"/>
+    </form>
+    <div class="button-container">
+        <button class="botton_to"
+            onclick="window.location.href = 'main.html';">
+            На главную
+        </button>
+    </div>
+</body>
+</html>
+
+
